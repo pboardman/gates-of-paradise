@@ -1,0 +1,193 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Font/HopeGold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Level/UI.gd" type="Script" id=2]
+[ext_resource path="res://Font/UIFont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Font/UIFont64.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Font/UIFont128.tres" type="DynamicFont" id=5]
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+outline_size = 1
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=1]
+resource_name = "FadeTextGreen"
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0.811765, 0.0901961, 1 ), Color( 0, 0.811765, 0.0901961, 0.74902 ), Color( 0, 0.811765, 0.0901961, 0.498039 ), Color( 0, 0.811765, 0.0901961, 0.247059 ), Color( 0, 0.811765, 0.0901961, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:custom_colors/font_outline_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0.74902 ), Color( 0, 0, 0, 0.498039 ), Color( 0, 0, 0, 0.247059 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "FadeTextRed"
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.811765, 0, 0, 1 ), Color( 0.811765, 0, 0, 0.74902 ), Color( 0.811765, 0, 0, 0.498039 ), Color( 0.811765, 0, 0, 0.247059 ), Color( 0.811765, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:custom_colors/font_outline_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0.74902 ), Color( 0, 0, 0, 0.498039 ), Color( 0, 0, 0, 0.247059 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[node name="UI" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="."]
+margin_left = 1.0
+margin_right = 181.0
+margin_bottom = 51.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Score: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeLeft" type="Label" parent="."]
+margin_left = 142.991
+margin_top = 0.00283813
+margin_right = 358.991
+margin_bottom = 51.0028
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Time to judge: N/A"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SoulLeft" type="Label" parent="."]
+margin_left = 0.943848
+margin_top = 608.275
+margin_right = 146.944
+margin_bottom = 640.275
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Soul left: 00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PreGameCountdown" type="Label" parent="."]
+visible = false
+margin_top = 192.0
+margin_right = 360.0
+margin_bottom = 368.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "3"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreShowLabel" type="Label" parent="."]
+margin_left = 56.0
+margin_top = 192.0
+margin_right = 96.0
+margin_bottom = 218.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0.811765, 0.0901961, 0.74902 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 0.74902 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ScoreShowLabel"]
+method_call_mode = 1
+anims/FadeTextGreen = SubResource( 1 )
+anims/FadeTextRed = SubResource( 3 )
+
+[node name="PostgameUI" type="Control" parent="."]
+margin_top = 128.0
+margin_right = 360.0
+margin_bottom = 496.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FinalScoreLabel" type="Label" parent="PostgameUI"]
+margin_top = 16.0
+margin_right = 360.0
+margin_bottom = 121.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Final Score
+5222"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="PostgameUI"]
+margin_top = 120.0
+margin_right = 360.0
+margin_bottom = 312.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayAgainButton" type="Button" parent="PostgameUI/ButtonsContainer"]
+margin_right = 360.0
+margin_bottom = 32.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.203922, 0.211765, 0.709804, 1 )
+custom_colors/font_color_hover = Color( 0.298039, 0.301961, 0.615686, 1 )
+text = "JUDGE MORE SOULS?"
+flat = true
+
+[node name="MainMenuButton" type="Button" parent="PostgameUI/ButtonsContainer"]
+margin_top = 36.0
+margin_right = 360.0
+margin_bottom = 68.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.203922, 0.211765, 0.709804, 1 )
+custom_colors/font_color_hover = Color( 0.298039, 0.301961, 0.615686, 1 )
+text = "MAIN MENU"
+flat = true
+[connection signal="pressed" from="PostgameUI/ButtonsContainer/PlayAgainButton" to="." method="_on_PlayAgainButton_pressed"]
+[connection signal="pressed" from="PostgameUI/ButtonsContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]

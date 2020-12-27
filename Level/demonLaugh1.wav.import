@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/demonLaugh1.wav-aebe4de2274b53b02b6f1b61526cc664.sample"
+
+[deps]
+
+source_file="res://Level/demonLaugh1.wav"
+dest_files=[ "res://.import/demonLaugh1.wav-aebe4de2274b53b02b6f1b61526cc664.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
