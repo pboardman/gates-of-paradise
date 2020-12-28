@@ -1,8 +1,217 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Soul/Soul.gd" type="Script" id=1]
+[ext_resource path="res://Soul/AngelCharacter.png" type="Texture" id=2]
+[ext_resource path="res://Soul/AngelHalo.png" type="Texture" id=3]
+[ext_resource path="res://Soul/DevilWings.png" type="Texture" id=4]
+[ext_resource path="res://Soul/AngelWings.png" type="Texture" id=5]
+[ext_resource path="res://Soul/DevilHorns.png" type="Texture" id=6]
+[ext_resource path="res://Soul/DevilTail.png" type="Texture" id=7]
+
+[sub_resource type="Animation" id=1]
+resource_name = "ToHeaven"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.917647 ), Color( 1, 1, 1, 0.835294 ), Color( 1, 1, 1, 0.752941 ), Color( 1, 1, 1, 0.670588 ), Color( 1, 1, 1, 0.588235 ), Color( 1, 1, 1, 0.505882 ), Color( 1, 1, 1, 0.423529 ), Color( 1, 1, 1, 0.341176 ), Color( 1, 1, 1, 0.258824 ), Color( 1, 1, 1, 0.176471 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SoulSprite:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 40, -40 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AngelHalo:offset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 40, -40 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AngelWing:offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 40, -40 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("DevilHorns:offset")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 40, -40 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("DevilTail:offset")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 40, -40 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("DevilWing:offset")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 40, -40 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "ToHell"
+length = 1.75
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SoulSprite:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 15 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AngelHalo:offset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 15 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AngelWing:offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 15 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("DevilHorns:offset")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 15 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("DevilTail:offset")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 15 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("DevilWing:offset")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 15 ) ]
+}
 
 [node name="Soul" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="SoulSprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="AngelHalo" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 3 )
+
+[node name="AngelWing" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 5 )
+
+[node name="DevilHorns" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 6 )
+
+[node name="DevilTail" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 7 )
+
+[node name="DevilWing" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/ToHeaven = SubResource( 1 )
+anims/ToHell = SubResource( 2 )
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

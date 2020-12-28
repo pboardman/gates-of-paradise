@@ -181,6 +181,7 @@ texture = ExtResource( 4 )
 centered = false
 vframes = 8
 hframes = 8
+frame = 27
 
 [node name="StartCountdownTimer" type="Timer" parent="."]
 wait_time = 3.0

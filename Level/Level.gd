@@ -46,7 +46,6 @@ func _ready():
 
 
 func _process(delta):
-	print(state)
 	match state:
 		PRE_GAME:
 			pre_game_state(delta)
@@ -120,7 +119,6 @@ func spawn_soul():
 
 func end_judgement():
 	if ui.get_souls_left() != 0:
-		soul.queue_free()
 		door.close()
 		state = WAITING_UNTIL_ANIM_END
 	else:
@@ -141,6 +139,7 @@ func _send_to_hell():
 	"""
 	state = WAITING
 	animationState.travel("SendToHell")
+	soul.go_to_hell()
 	set_animation_running()
 	
 	if soul.is_demon:
@@ -160,7 +159,9 @@ func _send_to_heaven():
 	Send the soul to heaven
 	"""
 	state = WAITING
+	
 	animationState.travel("DoorOpen")
+	soul.go_to_paradise()
 	set_animation_running()
 
 	if not soul.is_demon:
